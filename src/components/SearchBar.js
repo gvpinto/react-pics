@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 export class SearchBar extends Component {
-  onInputChange(event) {
-    console.log(event.target.value);
-  }
-
   render() {
     return (
       <div className='ui segment'>
@@ -13,7 +9,7 @@ export class SearchBar extends Component {
             <label htmlFor='imageSearch'>Image Search</label>
             <input
               type='text'
-              onChange={this.onInputChange}
+              onChange={(e) => console.log(e.target.value)}
               name='imageSearch'
             />
           </div>
